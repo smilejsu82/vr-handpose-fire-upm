@@ -1,5 +1,8 @@
 # Hand Pose Recorder — 변경 내역 (Changelog)
 
+## 패키지 v1.0.7
+- **Create Grab Attach From Ghost Hand** 에디터 툴 추가 (`Tools ▸ VR`). 잡을 오브젝트의 고스트 손목 위치에 Attach Transform을 자동 생성·연결 → 잡을 때 라이브 손이 고스트와 정렬됨.
+
 ## 패키지 v1.0.6
 - **Tracked Pose Driver Setup** 에디터 도구 포함 (`Tools ▸ VR ▸ Tracked Pose Driver Setup`).
 - 패키지 린화: 데모 씬(Step_09/10)·모델 제외, `Content/`에 필수 에셋만(XRHand 애니/컨트롤러, GhostHand/HandGlow).
