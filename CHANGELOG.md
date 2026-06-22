@@ -1,5 +1,11 @@
 # Hand Pose Recorder — 변경 내역 (Changelog)
 
+## 패키지 v1.0.6
+- **Tracked Pose Driver Setup** 에디터 도구 포함 (`Tools ▸ VR ▸ Tracked Pose Driver Setup`).
+- 패키지 린화: 데모 씬(Step_09/10)·모델 제외, `Content/`에 필수 에셋만(XRHand 애니/컨트롤러, GhostHand/HandGlow).
+
+---
+
 도구: `Tools → Hand Pose Recorder`
 버전 상수: `HandPoseRecorderWindow.Version` (한 곳만 수정하면 창 헤더·로그·프리팹 각인에 모두 반영)
 
