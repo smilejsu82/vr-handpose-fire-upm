@@ -1,0 +1,24 @@
+{
+  "name": "com.smilejsu82.vr-handpose-fire",
+  "version": "1.0.5",
+  "displayName": "VR Hand Pose + Fire (All-in-One)",
+  "description": "Hand Pose Recorder 도구, 잡기 그립 포즈 적용(Rifle), 두 손 VR 소화기 데모. 이 패키지를 추가하면 XR Interaction Toolkit / XR Hands / Input System / OpenXR / URP 의존성이 자동 설치됩니다. 데모 씬은 Samples에서 Import 하세요.",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.unity.xr.interaction.toolkit": "3.4.1",
+    "com.unity.xr.hands": "1.7.3",
+    "com.unity.inputsystem": "1.19.0",
+    "com.unity.render-pipelines.universal": "17.4.0",
+    "com.unity.xr.openxr": "1.16.1",
+    "com.unity.xr.management": "4.6.0"
+  },
+  "samples": [
+    {
+      "displayName": "Demo Scenes (Rifle + Fire Extinguisher)",
+      "description": "Step_09(라이플 그립) · Step_10(소화기) 데모 씬 + GhostHand + 포즈. ※ 씬은 XRI Starter Assets 리그/손 모델을 추가로 임포트해야 완전히 동작합니다.",
+      "path": "Samples~/Demo"
+    }
+  ],
+  "keywords": ["VR", "XR", "Hand Pose", "OpenXR", "Quest", "Fire Extinguisher"],
+  "author": { "name": "smilejsu82" }
+}
