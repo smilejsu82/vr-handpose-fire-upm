@@ -44,13 +44,18 @@ namespace VRDemo.EditorTools
                 return;
             }
 
-            var target = grab.transform;
-            Transform attach = target.Find(k_AttachName);
+            // attach를 둘 부모 = 고스트 핸드(HandPoseSnapshotRoot) 자식. 없으면 손목 하위.
+            var ghostRoot = go.GetComponentInParent<HandPoseSnapshotRoot>()
+                            ?? go.GetComponentInChildren<HandPoseSnapshotRoot>(true)
+                            ?? grab.GetComponentInChildren<HandPoseSnapshotRoot>(true);
+            Transform parent = ghostRoot != null ? ghostRoot.transform : wrist;
+
+            Transform attach = parent.Find(k_AttachName);
             if (attach == null)
             {
                 var attachGo = new GameObject(k_AttachName);
                 Undo.RegisterCreatedObjectUndo(attachGo, "Create Grab Attach");
-                attachGo.transform.SetParent(target, false);
+                attachGo.transform.SetParent(parent, false);
                 attach = attachGo.transform;
             }
             else

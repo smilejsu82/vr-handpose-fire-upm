@@ -1,5 +1,8 @@
 # Hand Pose Recorder — 변경 내역 (Changelog)
 
+## 패키지 v1.0.10
+- Grab Attach 툴: GrabAttach (Ghost Wrist)를 **고스트 핸드(HandPoseSnapshotRoot) 자식**으로 생성하도록 변경(정리용). 위치는 손목 그대로.
+
 ## 패키지 v1.0.9
 - Grab Attach 툴: **고스트(HandPose_Snapshot) 직접 선택**으로도 생성되게 개선(잡을 오브젝트/고스트 어느 쪽 선택이든 동작).
 - Interactor Attach 툴: NearFarInteractor의 실제 기준인 **InteractionAttachController `Transform To Follow`**도 손목으로 설정.
