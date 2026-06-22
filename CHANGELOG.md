@@ -1,5 +1,8 @@
 # Hand Pose Recorder — 변경 내역 (Changelog)
 
+## 패키지 v1.0.8
+- **Align Interactor Attach To Hand Wrist** 툴 추가 (`Tools ▸ VR`). 인터랙터 Attach를 손 손목에 정렬 → 큐브 attach(고스트 손목)와 만나 라이브 손이 고스트와 완전히 겹침.
+
 ## 패키지 v1.0.7
 - **Create Grab Attach From Ghost Hand** 에디터 툴 추가 (`Tools ▸ VR`). 잡을 오브젝트의 고스트 손목 위치에 Attach Transform을 자동 생성·연결 → 잡을 때 라이브 손이 고스트와 정렬됨.
 
