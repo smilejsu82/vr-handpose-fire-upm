@@ -1,5 +1,9 @@
 # Hand Pose Recorder — 변경 내역 (Changelog)
 
+## 패키지 v1.0.9
+- Grab Attach 툴: **고스트(HandPose_Snapshot) 직접 선택**으로도 생성되게 개선(잡을 오브젝트/고스트 어느 쪽 선택이든 동작).
+- Interactor Attach 툴: NearFarInteractor의 실제 기준인 **InteractionAttachController `Transform To Follow`**도 손목으로 설정.
+
 ## 패키지 v1.0.8
 - **Align Interactor Attach To Hand Wrist** 툴 추가 (`Tools ▸ VR`). 인터랙터 Attach를 손 손목에 정렬 → 큐브 attach(고스트 손목)와 만나 라이브 손이 고스트와 완전히 겹침.
 

@@ -1,6 +1,6 @@
 {
   "name": "com.smilejsu82.vr-handpose-fire",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "displayName": "VR Hand Pose + Fire (All-in-One)",
   "description": "Hand Pose Recorder 도구 + 그립 포즈 적용(Rifle) + FireSafetyVR 스크립트 + Tracked Pose Driver Setup. 추가 시 XR Interaction Toolkit / XR Hands / Input System / OpenXR / URP 의존성이 자동 설치됩니다. 데모 씬·모델은 미포함(라이선스/용량).",
   "unity": "6000.0",

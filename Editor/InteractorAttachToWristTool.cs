@@ -56,7 +56,7 @@ namespace VRDemo.EditorTools
             // 손목의 월드 pose로 배치
             attach.SetPositionAndRotation(wrist.position, wrist.rotation);
 
-            // 인터랙터의 Attach Transform 연결
+            // 1) 기본 Attach Transform (직접/근접 잡기 등에서 사용)
             var so = new SerializedObject(interactor);
             var prop = so.FindProperty("m_AttachTransform");
             if (prop != null)
@@ -64,10 +64,28 @@ namespace VRDemo.EditorTools
                 prop.objectReferenceValue = attach;
                 so.ApplyModifiedProperties();
             }
-
             EditorUtility.SetDirty(interactor);
+
+            // 2) NearFarInteractor 등: 실제 attach 기준은 InteractionAttachController의 'Transform To Follow'
+            bool setFollow = false;
+            var attachController = interactor.GetComponents<Component>()
+                .FirstOrDefault(c => c != null && c.GetType().Name == "InteractionAttachController");
+            if (attachController != null)
+            {
+                var so2 = new SerializedObject(attachController);
+                var follow = so2.FindProperty("m_TransformToFollow");
+                if (follow != null)
+                {
+                    follow.objectReferenceValue = attach;
+                    so2.ApplyModifiedProperties();
+                    EditorUtility.SetDirty(attachController);
+                    setFollow = true;
+                }
+            }
+
             Selection.activeObject = attach.gameObject;
-            Debug.Log($"[InteractorAttachToWrist] '{interactor.name}'의 Attach를 '{wrist.name}'에 맞췄습니다.", attach);
+            Debug.Log($"[InteractorAttachToWrist] '{interactor.name}' Attach를 '{wrist.name}'에 맞췄습니다. " +
+                      $"(AttachTransform 설정, Transform To Follow {(setFollow ? "설정됨" : "없음")})", attach);
         }
 
         // 인터랙터에서 위로 올라가며(컨트롤러까지) 손목 본을 찾는다.
