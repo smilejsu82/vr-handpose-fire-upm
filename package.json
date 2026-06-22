@@ -12,13 +12,6 @@
     "com.unity.xr.openxr": "1.16.1",
     "com.unity.xr.management": "4.6.0"
   },
-  "samples": [
-    {
-      "displayName": "Demo Scenes (Rifle + Fire Extinguisher)",
-      "description": "Step_09(라이플 그립) · Step_10(소화기) 데모 씬 + GhostHand + 포즈. ※ 씬은 XRI Starter Assets 리그/손 모델을 추가로 임포트해야 완전히 동작합니다.",
-      "path": "Samples~/Demo"
-    }
-  ],
   "keywords": ["VR", "XR", "Hand Pose", "OpenXR", "Quest", "Fire Extinguisher"],
   "author": { "name": "smilejsu82" }
 }
